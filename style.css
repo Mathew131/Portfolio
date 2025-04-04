@@ -214,15 +214,9 @@ footer {
     background: #333;
     color: #fff;
 }
-  
-
 
 /* для телефонов */
 @media (max-width: 768px) {
-    header, footer {
-        text-align: center;
-    }
-    
     nav {
         flex-direction: column;
     }
@@ -231,33 +225,11 @@ footer {
         flex-direction: column;
     }
     
-    .main_img img {
-        height: auto;
-        margin: auto;
-    }
-    
-    
     #intro, #skills, #edu {
-        height: auto;
         flex-direction: column;
     }
     
     .projects-container {
         flex-direction: column;
-    }
-    
-    
-    form {
-        max-width: 500px;
-        padding: 10px;
-    }
-    
-    form input, form textarea {
-        font-size: 0.9rem;
-    }
-    
-    form button {
-        font-size: 0.9rem;
-        padding: 10px;
     }
 }
