@@ -219,67 +219,35 @@ footer {
 
 /* для телефонов */
 @media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
-    
     header, footer {
-        padding: 10px;
         text-align: center;
     }
     
     nav {
         flex-direction: column;
-        gap: 10px;
     }
     
     .nav-links {
         flex-direction: column;
-        gap: 5px;
-        margin: 10px;
     }
     
     .main_img img {
-        max-width: 90%;
         height: auto;
-        margin: 0 auto;
+        margin: auto;
     }
     
-    .content h1 {
-        font-size: 32px;
-        padding-bottom: 10px;
-    }
-    
-    .content h2 {
-        font-size: 28px;
-        padding-bottom: 10px;
-    }
-    
-    .content p {
-        font-size: 18px;
-        padding-bottom: 20px;
-    }
     
     #intro, #skills, #edu {
         height: auto;
         flex-direction: column;
-        gap: 20px;
-        padding: 20px;
     }
     
     .projects-container {
         flex-direction: column;
-        gap: 20px;
-        padding: 10px;
     }
     
-    .project-item {
-        width: 90%;
-        margin: 0 auto;
-    }
     
     form {
-        width: 90%;
         max-width: 500px;
         padding: 10px;
     }
