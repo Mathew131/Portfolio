@@ -1,66 +1,100 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Название</title>
-        <link rel="stylesheet" href="test_style.css"/> 
-    </head>
-    <body>
-        <p>Моё имя — <span style="color: red;">Матвей</span>.</p>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="description" content="Портфолио разработчика Матвея">
+  <title>Портфолио Матвея</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        <header>Шапка сайта с меню</header>
-        <p> go <hr/>t<br/>o </p>
-        <input type="text" />
-        <!-- Содержимое -->
-        <img src="/home/mathew131/Downloads/HSSE/HSSE/assets/img/main_img.png" alt = "Логотип"/>
+  <header>
+    <nav>
+      <div class="logo">Портфолио</div>
+      <ul class="nav-links">
+        <li><a href="#intro">Главная</a></li>
+        <li><a href="#skills">Навыки</a></li>
+        <li><a href="#edu">Образование</a></li>
+        <li><a href="#projects">Работы</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <div class="card">
-            <h2>Мой проект</h2>
-            <p>Описание проекта</p>
+  <!-- intro -->
+  <section id="intro">
+    <div class="content">
+      <h1>Привет, я Матвей</h1>
+      <p>Начинающий разработчик</p>
+      <a href="#projects" class="btn">Мои работы</a>
+    </div>
+    <div class="main_img">
+        <img src="my_photo.jpg" alt="Главное изображение" />
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="content">
+      <h2>Навыки</h2>
+      <p>Математика, информатика, физика</p>
+    </div>
+  </section>
+
+  <section id="edu">
+    <div class="content">
+      <h2>Образование</h2>
+      <p>Студент ВШПИ 2 курс</p>
+    </div>
+  </section>
+  
+  <!-- projects -->
+  <section id="projects">
+    <div class="content">
+      <h2>Мои работы</h2>
+    </div>
+
+    <ul class="projects-container">
+      <li class="project-item">
+        <div class="project_image">
+          <img src="mainwindow1.png" alt="Проект 1">
         </div>
-        
-        <!-- block отображение(один под другим) -->
-        <div class="box">A</div>
-        <div class="box">B</div>
-        
-        <!-- init-block отображение(друг за другом в одной строке) -->
-        <div class="box" style="display: inline-block;">A</div>
-        <div class="box" style="display: inline-block;">B</div>
-        
-        <!-- flex отображение(друг за другом в одной строке + css) -->
-        <div class="container">
-            <div class="item">A</div>
-            <div class="item">B</div>
+        <h3>Tag Recognition</h3>
+        <p>Оценка качества детекции различных меток</p>
+        <a href="https://github.com/Tefaier/tagRecognition" target="_blank">Смотреть код</a>
+      </li>
+      <li class="project-item">
+        <div class="project_image">
+          <img src="mainwindow2.png" alt="Проект 2">
         </div>
+        <h3>Data Handler</h3>
+        <p>Программа для обработки и анализа данных</p>
+        <a href="https://github.com/Kirikus/2024_Experiments" target="_blank">Смотреть код</a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- contact -->
+  <section id="contact">
+      <h2>Связаться со мной</h2>
+      <form action="#" method="GET">
+          <label for="name">Имя</label>
+          <input type="text" id="name" name="name" required minlength="3" placeholder="Введите ваше имя">
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="example@mail.com">
+
+          <label for="message">Сообщение</label>
+          <textarea id="message" name="message" required placeholder="Ваше сообщение"></textarea>
+
+          <button type="submit">Отправить</button>
+      </form>
+  </section>
 
 
-        <!-- <form>
-            <input name="email" type="email">
-            <textarea name="message">kll</textarea>
-            <select name="role">
-                <option value="1">sds</option>
-                <option value="1">yyt</option>
-            </select>
-            <button type="submit">Отправить</button>
-        </form> -->
-        <form method="POST" action="/search">
-            <p>Email: <input name="email" type="email" placeholder="Введите email"></p>
-            <p>Телефон: <input name="phone" type="tel" placeholder="+7 (___) ___-__-__"></p>
-            <p>Пароль: <input name="pass" type="password" placeholder="********"></p>
-            <button type="submit">Отправить</button>
-        </form>
-          
+  <footer>
+    <p> 2025 </p>
+  </footer>
 
-        <!-- <footer><nav>
-            <ul class = "cls">
-              <li><a href="https://mipt.ru">Обо мне</a></li>
-              <li>Проекты</li>
-              <li><a href="#contacts">Контакты</a></li>
-            </ul>
-          </nav>
-        </footer> -->
-
-    </body>
+</body>
 </html>
-
-
