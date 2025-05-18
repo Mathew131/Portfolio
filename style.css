@@ -6,6 +6,7 @@
 
 body {
   background: url('back_mount.jpeg') center/cover fixed no-repeat;
+  overflow-x: hidden;
 }
 
 header {
@@ -57,7 +58,7 @@ p {
   flex-direction: column;
   align-items: center;
   margin-left: auto;
-  margin-right: 5vw;
+  margin-right: 20vw;
   padding: 20px 32px;
   background-color: rgba(255, 255, 255, 0.25);
   border-radius: 20px;
