@@ -57,7 +57,7 @@ p {
   flex-direction: column;
   align-items: center;
   margin-left: auto;
-  margin-right: 15vw;
+  margin-right: 20vw;
   padding: 20px 32px;
   background-color: rgba(255, 255, 255, 0.25);
   border-radius: 20px;
@@ -136,7 +136,7 @@ p {
 
 
 #intro {
-  width: 95vw;
+  width: 100vw;
   height: 45vh;
 
   display: flex;
@@ -165,20 +165,6 @@ p {
 
 
 
-
-
-#intro,
-.snow-wrapper,
-video.bg {
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.countdown-box{
-  margin-right: auto;  
-}
-
-body{ overflow-x: hidden; }
 /* projects --------------------------------------------------*/
 
 
