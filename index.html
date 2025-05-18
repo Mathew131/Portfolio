@@ -2,99 +2,139 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <meta name="description" content="Портфолио разработчика Матвея">
-  <title>Портфолио Матвея</title>
+  <title>Портфолио</title>
   <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="description" content="Портфолио разработчика Курченко Матвея">
+  <meta name="keywords" content="с++, pyhon, ml">
+  <meta name="author" content="Курченко Матвей">
 </head>
 <body>
 
   <header>
-    <nav>
-      <div class="logo">Портфолио</div>
-      <ul class="nav-links">
-        <li><a href="#intro">Главная</a></li>
-        <li><a href="#skills">Навыки</a></li>
-        <li><a href="#edu">Образование</a></li>
-        <li><a href="#projects">Работы</a></li>
-        <li><a href="#contact">Контакты</a></li>
-      </ul>
-    </nav>
+    <h1 class="title">Портфолио</h1>
   </header>
 
-  <!-- intro -->
-  <section id="intro">
-    <div class="content">
+
+  <div id="intro">
+    <div class="intro-text">
       <h1>Привет, я Матвей</h1>
-      <p>Начинающий разработчик</p>
-      <a href="#projects" class="btn">Мои работы</a>
+      <h3>Начинающий разработчик</h3>
+      <button id="open-feedback">Связаться со мной</button>
     </div>
-    <div class="main_img">
-        <img src="my_photo.jpg" alt="Главное изображение">
-    </div>
-  </section>
 
-  <section id="skills">
-    <div class="content">
-      <h2>Навыки</h2>
-      <p>Математика, информатика, физика</p>
+    <div class="countdown-box">
+      <div class="countdown-title">До получения диплома</div>
+      <div class="countdown">
+        <div class="time-box"><span id="days">00</span><small>ДНЕЙ</small></div>
+        <div class="time-box"><span id="hours">00</span><small>ЧАСОВ</small></div>
+        <div class="time-box"><span id="minutes">00</span><small>МИНУТ</small></div>
+        <div class="time-box"><span id="seconds">00</span><small>СЕК</small></div>
+      </div>
     </div>
-  </section>
+  </div>
 
-  <section id="edu">
-    <div class="content">
-      <h2>Образование</h2>
-      <p>Студент ВШПИ 2 курс</p>
-    </div>
-  </section>
-  
-  <!-- projects -->
+
   <section id="projects">
-    <div class="content">
+    <div class="my_proj">
       <h2>Мои работы</h2>
     </div>
-
     <ul class="projects-container">
       <li class="project-item">
-        <div class="project_image">
-          <img src="mainwindow1.png" alt="Проект 1">
-        </div>
-        <h3>Tag Recognition</h3>
-        <p>Оценка качества детекции различных меток</p>
-        <a href="https://github.com/Tefaier/tagRecognition" target="_blank">Смотреть код</a>
+        <a class="project-link" href="https://github.com/Tefaier/tagRecognition" target="_blank">
+          <div class="project_image">
+            <img src="mainwindow1.png" alt="Tag Recognition">
+          </div>
+          <h3>Tag Recognition</h3>
+          <p>Оценка качества детекции различных меток</p>
+        </a>
       </li>
+
       <li class="project-item">
-        <div class="project_image">
-          <img src="mainwindow2.png" alt="Проект 2">
-        </div>
-        <h3>Data Handler</h3>
-        <p>Программа для обработки и анализа данных</p>
-        <a href="https://github.com/Kirikus/2024_Experiments" target="_blank">Смотреть код</a>
+        <a class="project-link" href="https://github.com/Kirikus/2024_Experiments" target="_blank">
+          <div class="project_image">
+            <img src="mainwindow2.png" alt="Data Handler">
+          </div>
+          <h3>Data Handler</h3>
+          <p>Программа для обработки и анализа данных</p>
+        </a>
+      </li>
+
+      <li class="project-item">
+        <a class="project-link" href="https://github.com/Mathew131/Kototinder" target="_blank">
+          <div class="project_image">
+            <img src="icon_cat.png" alt="Cototinder">
+          </div>
+          <h3>Cototinder</h3>
+          <p>Мобильное приложение тиндер с котами</p>
+        </a>
+      </li>
+
+      <li class="project-item">
+        <a class="project-link" href="https://github.com/Mathew131/Portfolio" target="_blank">
+          <div class="project_image">
+            <img src="icon_portfolio.png" alt="Portfolio">
+          </div>
+          <h3>Portfolio</h3>
+          <p>Сайт портфолио</p>
+        </a>
+      </li>
+
+      <li class="project-item">
+        <a class="project-link" href="https://github.com/Mathew131/Chess" target="_blank">
+          <div class="project_image">
+            <img src="chess.png" alt="Chess">
+          </div>
+          <h3>Chess</h3>
+          <p>Шахматы</p>
+        </a>
       </li>
     </ul>
   </section>
 
-  <!-- contact -->
-  <section id="contact">
-      <h2>Связаться со мной</h2>
-      <form action="#" method="GET">
-          <label for="name">Имя</label>
-          <input type="text" id="name" name="name" required minlength="3" placeholder="Введите ваше имя">
 
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="example@mail.com">
+  <div id="project-popup" class="popup hidden">
+    <button class="popup-close">×</button>
+    <button class="popup-nav popup-prev">‹</button>
+    <div class="popup-content"></div>
+    <button class="popup-nav popup-next">›</button>
+  </div>
 
-          <label for="message">Сообщение</label>
-          <textarea id="message" name="message" required placeholder="Ваше сообщение"></textarea>
+  <div class="feedback-popup" id="feedbackPopup">
+    <div class="popup-content">
+      <button class="close-btn">×</button>
+      <h3>Связаться со мной</h3>
+      <form id="feedbackForm">
+        <label for="name">Имя</label>
+        <input id="name" type="text" placeholder="Введите ваше имя">
+        <div class="error" id="error-name"></div>
 
-          <button type="submit">Отправить</button>
+        <label for="email">Email</label>
+        <input id="email" type="text" placeholder="example@mail.com">
+        <div class="error" id="error-email"></div>
+
+        <label for="phone">Телефон</label>
+        <input id="phone" type="text" placeholder="+7 (999) 123-45-67">
+        <div class="error" id="error-phone"></div>
+
+        <label for="message">Сообщение</label>
+        <textarea id="message" placeholder="Ваше сообщение"></textarea>
+        <div class="error" id="error-message"></div>
+
+        <button type="submit">Отправить</button>
       </form>
-  </section>
+    </div>
+  </div>
 
+  <div id="autoPopup" class="popup hidden">
+    <div class="popup-content">
+      <button class="close-btn">×</button>
+      <p>Спасибо, что посетили мой сайт!</p>
+    </div>
+  </div>
 
-  <footer>
-    <p> 2025 </p>
-  </footer>
+  <div class="snow-container"></div>
 
+  <script src="script.js"  defer></script>
 </body>
 </html>
