@@ -134,14 +134,9 @@ let reEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+\.[A-Za-z]{2,}$/;
 let rePhone = /^(\+7|8)?\s?\(?\d{3}\)?[\s-]?\d{3}[\s-]?\d{2}[\s-]?\d{2}$/;
 let reMessage = /^[А-Яа-яЁё0-9\s.,!?()\-:;«»"']+$/;
 
-form.addEventListener('submit', async e => {
-  e.preventDefault();
 
-  errName.textContent = '';
-  errEmail.textContent = '';
-  errPhone.textContent = '';
-  errMsg.textContent = '';
 
+function validateName() {
   let valid = true;
 
   if (!nameFld.value.trim()) {
@@ -150,7 +145,16 @@ form.addEventListener('submit', async e => {
   } else if (!reNameMsg.test(nameFld.value.trim())) {
     errName.textContent = 'Только русские буквы';
     valid = false;
+  } else {
+    errName.textContent = '';
   }
+
+  return valid;
+}
+
+
+function validateEmail() {
+  let valid = true;
 
   if (!emailFld.value.trim()) {
     errEmail.textContent = 'Введите email';
@@ -158,7 +162,15 @@ form.addEventListener('submit', async e => {
   } else if (!reEmail.test(emailFld.value.trim())) {
     errEmail.textContent = 'Неверный формат email';
     valid = false;
+  } else {
+    errEmail.textContent = '';
   }
+
+  return valid;
+}
+
+function validatePhone() {
+  let valid = true;
 
   if (!phoneFld.value.trim()) {
     errPhone.textContent = 'Введите телефон';
@@ -166,7 +178,15 @@ form.addEventListener('submit', async e => {
   } else if (!rePhone.test(phoneFld.value.trim())) {
     errPhone.textContent = 'Неверный формат телефона';
     valid = false;
+  } else {
+    errPhone.textContent = '';
   }
+
+  return valid;
+}
+
+function validateText() {
+  let valid = true;
 
   if (!msgFld.value.trim()) {
     errMsg.textContent = 'Введите сообщение';
@@ -174,9 +194,24 @@ form.addEventListener('submit', async e => {
   } else if (!reMessage.test(msgFld.value.trim())) {
     errMsg.textContent = 'Только русские буквы, знаки препинания и цифры';
     valid = false;
+  } else {
+    errMsg.textContent = '';
   }
 
-  if (!valid) return;
+  return valid;
+}
+
+
+nameFld.addEventListener('input', validateName);
+emailFld.addEventListener('input', validateEmail);
+phoneFld.addEventListener('input', validatePhone);
+msgFld.addEventListener('input', validateText);
+
+
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+
+  if (!(validateName() && validateEmail() && validatePhone() && validateMessage())) return;
   
   let btn = form.querySelector('button[type="submit"]');
 
