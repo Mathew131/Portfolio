@@ -219,7 +219,7 @@ let mouseX = window.innerWidth / 2;
 
 for (let i = 0; i < flakesCount; i++) {
   let el = document.createElement('img');
-  el.src = 'snowflake.svg';;
+  el.src = 'snowflake.svg';
   el.className = 'snowflake';
 
   let size  = Math.random() * 0.5 + 0.6;
