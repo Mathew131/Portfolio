@@ -61,8 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
       <a class="btn" href="${link}" target="_blank">Смотреть код</a>
     `);
 
-    btnPrev.classList.toggle('hidden', idx === 0);
-    btnNext.classList.toggle('hidden', idx === items.length - 1);
+    // btnPrev.classList.toggle('hidden', idx === 0);
+    // btnNext.classList.toggle('hidden', idx === items.length - 1);
   }
 
   items.forEach((it, i) => {
@@ -76,9 +76,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   btnPrev.addEventListener('click', () => {
     if (current > 0) renderPopup(--current);
+    else {
+      current = items.length;
+      renderPopup(current);
+    }
   });
   btnNext.addEventListener('click', () => {
     if (current < items.length - 1) renderPopup(++current);
+    else {
+      current = 0;
+      renderPopup(current);
+    }
   });
   btnClose.addEventListener('click', () => {
     popup.classList.add('hidden');
